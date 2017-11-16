@@ -32,7 +32,7 @@ function [result_imag]= min_value_filter(image,filter_size)
     for x=1+helf_size:1:M-helf_size
         for y=1+helf_size:1:N-helf_size
             slid=Ex_image(x-helf_size:1:x+helf_size,y-helf_size:1:y+helf_size);
-            temp = sort(slid(:));
+            temp = sort(slid(:);
             result_imag(x,y)= temp((numel(temp)-1)/2);
         end
     end
